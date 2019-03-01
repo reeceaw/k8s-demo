@@ -26,9 +26,8 @@ Navigate to the dashboard:
 http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview
 ```
 
-If presented with a sign in screen, copy the result of:
+If presented with a sign in screen, run:
 ```
 kubectl describe secret kubernetes-dashboard --namespace=kube-system | grep 'token:' | awk '{print $2}' | pbcopy
 ```
-
-and enter into the 'Token' option on the sign in screen.
+to copy your token. Paste this into the 'Token' option on the sign in screen.
